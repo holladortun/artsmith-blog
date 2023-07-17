@@ -1,0 +1,27 @@
+# Directories
+node_modules/
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+
+# Log files
+*.log
+
+# Editor and IDE files
+.vscode/
+
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+
+# System and temporary files
+.DS_Store
+Thumbs.db
