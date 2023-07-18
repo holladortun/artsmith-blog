@@ -1,3 +1,4 @@
+import { PostModel } from '../models/postModel';
 import useFetchPosts from '../swr/useFetchPosts';
 import Post from './Post';
 
@@ -9,7 +10,7 @@ const PostsList = () => {
         {data
           ?.slice(-4)
           .reverse()
-          .map((item) => {
+          .map((item: PostModel) => {
             return <Post key={item?.title} details={item} />;
           })}
       </div>
