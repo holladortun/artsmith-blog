@@ -14,7 +14,7 @@ const useCreatePost = () => {
     setSuccess(false);
 
     try {
-      const response = await axios.post('http://localhost:3000/api/posts/', {
+      const response = await axios.post('https://artsmith-backend.onrender.com/api/posts', {
         title,
         content,
       });
