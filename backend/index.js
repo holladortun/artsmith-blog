@@ -4,7 +4,7 @@ const helmet = require("helmet");
 const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
-var cors = require("cors");
+const cors = require("cors");
 const port = 3000;
 const userRouter = require("./routes/users");
 const postRouter = require("./routes/posts");
@@ -27,7 +27,11 @@ app.use(
 );
 
 app.use(helmet());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://artsmiths-blog.vercel.app",
+  })
+);
 app.use("/api/users", userRouter);
 app.use("/api/posts", postRouter);
 

@@ -11,7 +11,10 @@ const fetcher = async (url: string) => {
   return res.data;
 };
 const useFetchPosts = () => {
-  const { data, error, isLoading } = useSWR(`http://localhost:3000/api/posts/`, fetcher);
+  const { data, error, isLoading } = useSWR(
+    `https://artsmith-backend.onrender.com/api/posts`,
+    fetcher,
+  );
 
   return { data, error, isLoading };
 };
